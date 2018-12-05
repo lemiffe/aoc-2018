@@ -27,6 +27,7 @@ input = 'OoibdgGDEesYySsSMmlLIKkkVvKvViERxXVvrfmMsSFeaAvnNVdMmJjDBmMXbBJjWwPZzpH
 print('Original polymer count: ' + str(len(input)))
 
 while True:
+	# Note: I am aware I could just run a regex replace here, but this was fast enough even on a 50k-character string
 	matches = re.findall(pattern, input)
 	if len(matches) > 0:
 		for match in re.findall(pattern, input):
